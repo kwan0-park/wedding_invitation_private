@@ -47,42 +47,61 @@ class _GalleryState extends State<Gallery> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 500.0,
-      margin: const EdgeInsetsDirectional.all(20.0),
-      child: GridView.builder(
-        shrinkWrap: true,
-        physics: NeverScrollableScrollPhysics(),
-        scrollDirection: Axis.vertical,
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 3, // 한 행에 표시할 썸네일 수
-        ),
-        itemCount: widget.imagePaths.length,
-        itemBuilder: (context, index) {
-          return GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) => ImagePage(
-                    initialIndex: index,
-                    imageProviders: widget.imagePaths,
-                  ),
+    return Center(
+      child: Container(
+        width: 500.0,
+        margin: const EdgeInsetsDirectional.all(20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(height: 40),
+            Align(
+              alignment: Alignment.center,
+              child: const AutoSizeText(
+                '갤러리',
+                style: TextStyle(
+                  color: Color.fromRGBO(41, 82, 56, 100),
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
+          
+          GridView.builder(
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 3,
+              crossAxisSpacing: 4,
+              mainAxisSpacing: 4,
+            ),
+            itemCount: widget.imagePaths.length,
+            itemBuilder: (context, index) {
+              return GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder: (context, animation, secondaryAnimation) => ImagePage(
+                        initialIndex: index,
+                        imageProviders: widget.imagePaths,
+                      ),
+                    ),
+                  );
+                },
+                child: Image(
+                  image: widget.imagePaths[index],
+                  fit: BoxFit.cover,
                 ),
               );
             },
-            child: Container(
-              margin: EdgeInsets.all(4.0),
-              child: Image(
-                image: widget.imagePaths[index],
-                fit: BoxFit.cover,
-              ),
-            ),
-          );
-        },
+          ),
+        ],
       ),
-    );
-  }
+    ),
+  );
+}
   
   @override
   void dispose() {

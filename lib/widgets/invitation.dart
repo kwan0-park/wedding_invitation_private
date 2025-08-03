@@ -83,21 +83,21 @@ Widget _buildPopUpContent() {
     child: Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        _buildContactInfo('신랑', '유균호', '010-8754-9911', indiBlueColor),
+        _buildContactInfo('신랑', '박관영', '010-5586-2155', indiBlueColor),
         const SizedBox(height: 1),
-        _buildContactInfo('신랑 아버지', '유병수', '010-3679-2570', indiBlueColor),
+        _buildContactInfo('신랑 아버지', '박봉희', '010-4280-2155', indiBlueColor),
         const SizedBox(height: 1),
-        _buildContactInfo('신랑 어머니', '나윤옥', '010-8648-6008', indiBlueColor),
+        _buildContactInfo('신랑 어머니', '김순례', '010-3307-2155', indiBlueColor),
 
         const SizedBox(height: 10),
         Divider(thickness: 1, height: 1,),
         const SizedBox(height: 10),
 
-        _buildContactInfo('신부', '심하영', '010-2837-2059', indiPinkColor),
+        _buildContactInfo('신부', '전보광', '010-3228-3239', indiPinkColor),
         const SizedBox(height: 1),
-        _buildContactInfo('신부 아버지', '심영석', '010-2837-0600', indiPinkColor),
+        _buildContactInfo('신부 아버지', '전우소', '010-5170-7701', indiPinkColor),
         const SizedBox(height: 1),
-        _buildContactInfo('신부 어머니', '류지현', '010-2808-2083', indiPinkColor),
+        _buildContactInfo('신부 어머니', '이민리', '010-6670-3239', indiPinkColor),
       ],
     ),
   );
@@ -136,53 +136,57 @@ Widget _buildContactButton(BuildContext context) {
 class Invitation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container (
-      width: 500.0,
-      margin: const EdgeInsetsDirectional.all(20.0),
-      child: Column (
-        children: [
-          Container (
-            height: 150,
-            width: 500.0,
-            child: Image.asset('assets/images/wizard.png', fit: BoxFit.contain,),
-          ),
-          
-          const SizedBox(height: 40),
-          const AutoSizeText(
-            '소중하고 감사한 당신을 초대합니다.',
-            style: TextStyle(
-              color: Color.fromRGBO(41, 82, 56, 100),
-              fontSize: 18,
-              fontWeight: FontWeight.w600)
-          ),
-
-          const SizedBox(height: 40),
-          const AutoSizeText(
-            '연인으로서 맞이한 열 번의 봄날을 뒤로 하고,\n이제는 부부로서의 첫 번째 봄을 맞이하고자 합니다.\n둘이서 만들어갈 나날의 첫 시작을 함께 밝혀주시면\n더없는 기쁨으로 간직하겠습니다.',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 15,
-              height: 2,
-              fontWeight: FontWeight.w600),
-          ),
-
-          const SizedBox(height: 50),
-          _buildName('박봉희', '김순례', '의 아들', '박관영'),
-          const SizedBox(height: 10),
-          _buildName('전', '', '의 딸', '전보광'),
-          const SizedBox(height: 50),
-          /*
-          Container (
-            height: 350.0,
-            child: Image.asset(
-              'assets/images/invitation.png',
-              fit: BoxFit.fitWidth,
+    return Center(
+      child: Container (
+        width: 500.0,
+        margin: const EdgeInsetsDirectional.all(20.0),
+        child: Column (
+          children: [
+            Container (
+              height: 150,
+              child: Image.asset(
+                'assets/images/wizard.png', 
+                fit: BoxFit.contain,
+              ),
             ),
-          ),
-          const SizedBox(height: 40),
-          */
-          _buildContactButton(context),
-        ],
+            
+            const SizedBox(height: 40),
+            const AutoSizeText(
+              '소중하고 감사한 당신을 초대합니다.',
+              style: TextStyle(
+                color: Color.fromRGBO(41, 82, 56, 100),
+                fontSize: 18,
+                fontWeight: FontWeight.w600)
+            ),
+
+            const SizedBox(height: 40),
+            const AutoSizeText(
+              '잠들 때 서로의 손을 꼭 잡는 해달처럼,\n우리는 앞으로의 삶에서도 늘 손을 맞잡고 함께하겠습니다.\n흘러가는 시간 속에서도 서로를 놓지 않으며\n따뜻한 하루하루를 함께 만들어가려 합니다.',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 15,
+                height: 2,
+                fontWeight: FontWeight.w600),
+            ),
+
+            const SizedBox(height: 50),
+            _buildName('박봉희', '김순례', '아들', '박관영'),
+            const SizedBox(height: 10),
+            _buildName('전우소', '이민리', '딸', '전보광'),
+            const SizedBox(height: 50),
+            /*
+            Container (
+              height: 350.0,
+              child: Image.asset(
+                'assets/images/invitation.png',
+                fit: BoxFit.fitWidth,
+              ),
+            ),
+            const SizedBox(height: 40),
+            */
+            _buildContactButton(context),
+          ],
+        )
       )
     );
   }

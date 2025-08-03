@@ -51,12 +51,11 @@ class BankAccount extends StatelessWidget {
       width: 500.0,
       child: Column(
         children: [
-          /*
           Text(
             '마음 전하는 곳',
             style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w600, height: 1, color: Color.fromRGBO(41, 82, 56, 100))
           ),
-          */
+          const SizedBox(height: 20),
           ExpansionTile(
             title: Center(
               child: Text(
@@ -68,9 +67,11 @@ class BankAccount extends StatelessWidget {
             backgroundColor: Colors.white,
             shape: Border.all(color: Colors.transparent),
             children: <Widget>[
-              _buildExpansionItem(context, '농협', '302-1041-4698-11', '유병수'),
+              _buildExpansionItem(context, '농협', 'TBD', '박봉희'),
               const SizedBox(height: 10),
-              _buildExpansionItem(context, '우리', 'TBD', '유균호'),
+              _buildExpansionItem(context, '국민은행', 'TBD', '김순례'),
+              const SizedBox(height: 10),
+              _buildExpansionItem(context, '새마을금고', '9003-242628-139', '박관영'),
             ]
           ),
           ExpansionTile(
@@ -84,9 +85,11 @@ class BankAccount extends StatelessWidget {
             backgroundColor: Colors.white,
             shape: Border.all(color: Colors.transparent),
             children: <Widget>[
-              _buildExpansionItem(context, '대구', 'TBD', '심영석'),
+              _buildExpansionItem(context, '대전', 'TBD', '전우소'),
               const SizedBox(height: 10),
-              _buildExpansionItem(context, '우리', '1002-980-312406', '심하영'),
+              _buildExpansionItem(context, '대전', 'TBD', '이민리'),
+              const SizedBox(height: 10),
+              _buildExpansionItem(context, '카카오뱅크', '3333-0987-73509', '전보광'),
             ]
           ),
         ],
