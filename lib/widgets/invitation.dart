@@ -172,7 +172,7 @@ class Invitation extends StatelessWidget {
             const SizedBox(height: 50),
             _buildName('박봉희', '김순례', '아들', '박관영'),
             const SizedBox(height: 10),
-            _buildName('전우소', '이민리', '딸', '전보광'),
+            _buildName('전우소', '이민리', '딸', '  전보광'),
             const SizedBox(height: 50),
             /*
             Container (
