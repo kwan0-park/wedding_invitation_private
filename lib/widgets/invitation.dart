@@ -148,7 +148,6 @@ class Invitation extends StatelessWidget {
           ),
           
           const SizedBox(height: 40),
-          /*
           const AutoSizeText(
             '소중하고 감사한 당신을 초대합니다.',
             style: TextStyle(
@@ -168,11 +167,11 @@ class Invitation extends StatelessWidget {
           ),
 
           const SizedBox(height: 50),
-          _buildName('유병수', '나윤옥', '장남', '유균호'),
+          _buildName('박봉희', '김순례', '의 아들', '박관영'),
           const SizedBox(height: 10),
-          _buildName('심영석', '류지현', '장녀', '심하영'),
+          _buildName('전', '', '의 딸', '전보광'),
           const SizedBox(height: 50),
-          */
+          /*
           Container (
             height: 350.0,
             child: Image.asset(
@@ -181,6 +180,7 @@ class Invitation extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 40),
+          */
           _buildContactButton(context),
         ],
       )
