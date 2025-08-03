@@ -95,9 +95,9 @@ Widget _buildPopUpContent() {
 
         _buildContactInfo('신부', '전보광', '010-3228-3239', indiPinkColor),
         const SizedBox(height: 1),
-        _buildContactInfo('신부 아버지', '전', '010-2837-0600', indiPinkColor),
+        _buildContactInfo('신부 아버지', '전우소', '010-5170-7701', indiPinkColor),
         const SizedBox(height: 1),
-        _buildContactInfo('신부 어머니', '', '010-2808-2083', indiPinkColor),
+        _buildContactInfo('신부 어머니', '이민리', '010-6670-3239', indiPinkColor),
       ],
     ),
   );
@@ -172,7 +172,7 @@ class Invitation extends StatelessWidget {
             const SizedBox(height: 50),
             _buildName('박봉희', '김순례', '아들', '박관영'),
             const SizedBox(height: 10),
-            _buildName('전', '', '딸', '전보광'),
+            _buildName('전우소', '이민리', '딸', '전보광'),
             const SizedBox(height: 50),
             /*
             Container (
