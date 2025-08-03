@@ -61,7 +61,7 @@ class _GalleryState extends State<Gallery> {
                 '갤러리',
                 style: TextStyle(
                   color: Color.fromRGBO(41, 82, 56, 100),
-                  fontSize: 20,
+                  fontSize: 18,
                   fontWeight: FontWeight.w600,
                 ),
               ),

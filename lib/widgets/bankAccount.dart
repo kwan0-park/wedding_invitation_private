@@ -53,8 +53,9 @@ class BankAccount extends StatelessWidget {
         children: [
           Text(
             '마음 전하는 곳',
-            style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w600, height: 1, color: Color.fromRGBO(41, 82, 56, 100))
+            style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w600, height: 1, color: Color.fromRGBO(41, 82, 56, 100))
           ),
+          const SizedBox(height: 20),
           ExpansionTile(
             title: Center(
               child: Text(
