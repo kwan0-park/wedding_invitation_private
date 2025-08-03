@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp (
-      title: '유균호❤️심하영 결혼합니다.',
+      title: '박관영❤️전보광 결혼합니다.',
       theme: ThemeData (
         fontFamily: 'GowunBatang',
         scaffoldBackgroundColor: const Color(0xFFFFFFFF),
