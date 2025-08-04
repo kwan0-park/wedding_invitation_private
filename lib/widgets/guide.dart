@@ -9,33 +9,26 @@ class Guide extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 500.0,
-      margin: EdgeInsetsDirectional.all(20.0),
-      child: Column(
+      margin: const EdgeInsetsDirectional.all(20.0),
+      child: const Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          /*
-          Text(
-            '예식 안내사항',
-            style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w600, height: 1, color: Color.fromRGBO(41, 82, 56, 100))
-          ),
           Text(
             '식사 안내',
-            style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w600, height: 3)
-          ),
-          Text(
-            '식사는 예식 30분 전인 11시 30분부터 가능합니다. (6층 연회장)',
-            style: TextStyle(height: 2,)
-          ),
-          Text(
-            '식사는 뷔페식이며, 양쪽의 메뉴가 다르게 구성되어 있습니다.',
-            style: TextStyle(height: 2,)
-          ),
-          */
-          Container (
-            height: 240.0,
-            child: Image.asset(
-              'assets/images/guide.png',
-              fit: BoxFit.fitWidth,
+            style: TextStyle(
+              fontSize: 16.0, 
+              fontWeight: FontWeight.w600, 
+              height: 3
             ),
+          ),
+          Text(
+            '식사는 코스요리이며, 맥주는 무제한으로 제공됩니다.',
+            style: TextStyle(height: 2,)
+          ),
+          Text(
+            '2층에서 식과 함께 먼저 식사할 수 있고,\n3층에서 예식 이후 식사할 수 있습니다.',
+            style: TextStyle(height: 2,)
           ),
         ],
       )

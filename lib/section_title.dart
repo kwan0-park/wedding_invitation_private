@@ -19,6 +19,18 @@ class SectionTitle extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         if (spacingTop > 0) SizedBox(height: spacingTop),
+        const Center(
+          child: SizedBox(
+            width: 250,
+            child: const Divider(
+              thickness: 1,
+              color: Color.fromRGBO(41, 82, 56, 0.3), // 연한 녹색 계열
+              // indent: 60, // 양쪽 여백
+              // endIndent: 60,
+            ),
+          ),
+        ),
+        const SizedBox(height: 20),
         AutoSizeText(
           text,
           textAlign: textAlign,

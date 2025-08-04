@@ -18,7 +18,7 @@ Widget _buildTitle() {
       ),
       */
       Container (
-        // height: 340.0,
+        height: 340.0,
         child: Image.asset(
           'assets/images/intro_01.png',
           fit: BoxFit.fitWidth,
@@ -52,33 +52,35 @@ Widget _buildDday(BuildContext context) {
 }
 
 Widget _buildEventInfo() {
-  return Column (
+  return const Column (
     children: [
-      /*
       Text (
-        '박관영 | 전보광',
+        '박관영 & 전보광',
         textAlign: TextAlign.center,
-        style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+        style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold),
+      ),
+      Text (
+        '🤵💒👰',
+        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: 16.0, height: 2),
+      ),
+      Text (
+        '결혼합니다',
+        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w600, height: 2),
       ),
       SizedBox(height: 20),
       Text (
         '2026년 2월 8일 일요일 13시',
         textAlign: TextAlign.center,
-        style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w600, height: 2),
+        style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w600, height: 2),
       ),
       Text (
         '노블발렌티 삼성점',
         textAlign: TextAlign.center,
         style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w600, height: 2),
       ),
-      */
-      Container (
-        // height: 240.0,
-        child: Image.asset(
-          'assets/images/intro_03.png',
-          fit: BoxFit.fitWidth,
-        ),
-      ),
+
     ]
   );
 }
@@ -92,9 +94,11 @@ class Welcome extends StatelessWidget {
         margin: const EdgeInsetsDirectional.all(20.0),
         child: Column (
           children: [
-            const SizedBox(height: 20),
+            // const SizedBox(height: 20),
             _buildTitle(),
-            const SizedBox(height: 30),
+            const SizedBox(height: 20),
+            _buildEventInfo(),
+            const SizedBox(height: 20),
             Container (
               // height: 600.0,
               width: 500.0,
@@ -104,7 +108,6 @@ class Welcome extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 30),
-            _buildEventInfo(),
           ],
         )
       )
