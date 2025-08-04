@@ -7,6 +7,7 @@ import 'package:wedding_invitation/widgets/map.dart';
 import 'package:wedding_invitation/widgets/guide.dart';
 import 'package:wedding_invitation/widgets/bankAccount.dart';
 import 'package:wedding_invitation/widgets/developed_by.dart';
+import 'section_title.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -40,6 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               Welcome(),
               Invitation(),
+              const SectionTitle(text: '갤러리', spacingTop: 40.0,),
               Gallery(),
               const SizedBox(height: 20),
               Map(),
