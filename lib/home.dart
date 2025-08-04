@@ -5,8 +5,9 @@ import 'package:wedding_invitation/widgets/invitation.dart';
 import 'package:wedding_invitation/widgets/gallery.dart';
 import 'package:wedding_invitation/widgets/map.dart';
 import 'package:wedding_invitation/widgets/guide.dart';
-import 'package:wedding_invitation/widgets/bankAccount.dart';
+import 'package:wedding_invitation/widgets/bank_account.dart';
 import 'package:wedding_invitation/widgets/developed_by.dart';
+import 'section_title.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -39,16 +40,18 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column (
             children: [
               Welcome(),
+              const SectionTitle(text: '소중하고 감사한 당신을 초대합니다.', spacingTop: 60.0,),
               Invitation(),
+              const SectionTitle(text: '갤러리', spacingTop: 60.0,),
               Gallery(),
-              const SizedBox(height: 20),
+              const SectionTitle(text: '오시는 길', spacingTop: 60.0,),
               Map(),
-              const SizedBox(height: 20),
+              const SectionTitle(text: '예식 안내사항', spacingTop: 60.0,),
               Guide(),
-              //const SizedBox(height: 20),
+              const SectionTitle(text: '마음 전하는 곳', spacingTop: 60.0,),
               BankAccount(),
-              const SizedBox(height: 20),
-              DevelopedBy(),                //DONE
+              const SizedBox(height: 60),
+              DevelopedBy(),
             ],
           ),
         ),

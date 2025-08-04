@@ -143,22 +143,12 @@ class Invitation extends StatelessWidget {
         child: Column (
           children: [
             Container (
-              height: 150,
+              height: 100,
               child: Image.asset(
                 'assets/images/wizard.png', 
                 fit: BoxFit.contain,
               ),
             ),
-            
-            const SizedBox(height: 40),
-            const AutoSizeText(
-              '소중하고 감사한 당신을 초대합니다.',
-              style: TextStyle(
-                color: Color.fromRGBO(41, 82, 56, 100),
-                fontSize: 18,
-                fontWeight: FontWeight.w600)
-            ),
-
             const SizedBox(height: 40),
             const AutoSizeText(
               '잠들 때 서로의 손을 꼭 잡는 해달처럼,\n우리는 앞으로의 삶에서도 늘 손을 맞잡고 함께하겠습니다.\n흘러가는 시간 속에서도 서로를 놓지 않으며\n따뜻한 하루하루를 함께 만들어가려 합니다.',
@@ -172,7 +162,7 @@ class Invitation extends StatelessWidget {
             const SizedBox(height: 50),
             _buildName('박봉희', '김순례', '아들', '박관영'),
             const SizedBox(height: 10),
-            _buildName('전우소', '이민리', '딸', '전보광'),
+            _buildName('전우소', '이민리', '딸', '  전보광'),
             const SizedBox(height: 50),
             /*
             Container (
